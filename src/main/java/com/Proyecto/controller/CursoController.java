@@ -1,0 +1,56 @@
+
+package com.Proyecto.controller;
+
+import com.Proyecto.domain.Curso;
+import com.Proyecto.service.CursoService;
+//import com.Proyecto.service.FirebaseStorageService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+@Controller
+@RequestMapping("/curso")
+public class CursoController {
+     @Autowired
+    private CursoService categoriaService;
+    @GetMapping("/reposteria")
+    public String reposteria(){
+        
+        
+        return "/curso/reposteria";
+        
+    }
+    @GetMapping("/brownie")
+    public String brownie(){
+        
+        
+        return "/curso/brownie";
+        
+    }
+    @GetMapping("/queque")
+    public String queque(){
+        
+        
+        return "/curso/queque";
+        
+    }
+    @GetMapping("/quequeSeco")
+    public String quequeSeco(){
+        
+        
+        return "/curso/quequeSeco";
+        
+    }
+    @GetMapping("/diseños")
+    public String diseños(){
+        
+        
+        return "/curso/diseños";
+        
+    }
+    
+}
