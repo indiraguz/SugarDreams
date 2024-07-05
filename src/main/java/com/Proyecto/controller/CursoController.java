@@ -3,7 +3,7 @@ package com.Proyecto.controller;
 
 import com.Proyecto.domain.Curso;
 import com.Proyecto.service.CursoService;
-//import com.Proyecto.service.FirebaseStorageService;
+import com.Proyecto.service.FirebaseStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/curso")
 public class CursoController {
      @Autowired
-    private CursoService categoriaService;
+    private CursoService cursoService;
     @GetMapping("/reposteria")
     public String reposteria(){
         
@@ -45,12 +45,15 @@ public class CursoController {
         return "/curso/quequeSeco";
         
     }
-    @GetMapping("/diseños")
-    public String diseños(){
+    @PostMapping("/guardar")
+    public String guardar(Curso curso){
         
+            cursoService.save(curso);
+           
+        return "redirect:/curso/queque";
         
-        return "/curso/diseños";
         
     }
+    
     
 }

@@ -71,13 +71,15 @@
             </div>
         </div>
     </div>
-            <div class="container mt-5">
-                <form>
-
-
-                    <button type="submit" class="btn btn-primary">Inscribirse</button>
-                </form>
-            </div>
+           <div class="container mt-5">
+    <form th:action="@{/curso/guardar}" method="post">
+        <input type="hidden" name="descripcion" value="Descripción predefinida" />
+        <input type="hidden" name="precio" value="50.00" />
+        <input type="hidden" name="duracion" value="6 semanas" />
+        <input type="hidden" name="nombre" value="Creacion de reposteria I" />
+        <button type="submit" class="btn btn-primary">Inscribirse</button>
+    </form>
+</div>
             
             
                 <div class="container mt-5">
@@ -292,13 +294,14 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
         
-      <img src="/static/img/LogoFooter.jpg"  class="d-block" alt="Imagen 1">
+        <img src="https://firebasestorage.googleapis.com/v0/b/techshop-fdc22.appspot.com/o/techshop%2Fcategoria%2FCaptura%20de%20pantalla%202024-06-24%20003003.png?alt=media&token=ad5cb736-d1f7-4df3-b283-6f1a8dc353f2"  class="d-block" alt="200" height="200">
+            
     </div>
     <div class="carousel-item">
-      <img src="/static/img/LogoFooter.jpg" class="d-block" alt="Imagen 2">
+      <img src="https://firebasestorage.googleapis.com/v0/b/techshop-fdc22.appspot.com/o/techshop%2Fcategoria%2FCaptura%20de%20pantalla%202024-06-24%20003003.png?alt=media&token=ad5cb736-d1f7-4df3-b283-6f1a8dc353f2" class="d-block" alt="200" height="200">
     </div>
     <div class="carousel-item">
-      <img src="/static/img/LogoFooter.jpg" class="d-block" alt="Imagen 3">
+      <img src="https://firebasestorage.googleapis.com/v0/b/techshop-fdc22.appspot.com/o/techshop%2Fcategoria%2FCaptura%20de%20pantalla%202024-06-24%20003003.png?alt=media&token=ad5cb736-d1f7-4df3-b283-6f1a8dc353f2" class="d-block" alt="200" height="200">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
